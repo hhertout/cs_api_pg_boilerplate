@@ -14,6 +14,8 @@ builder.Services.AddSwaggerGen();
 string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 connectionString = connectionString.Replace("{DB_USERNAME}", Environment.GetEnvironmentVariable("DB_USERNAME") ?? "user");
 connectionString = connectionString.Replace("{DB_PASSWORD}", Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "password");
+connectionString = connectionString.Replace("{DB_HOST}", Environment.GetEnvironmentVariable("DB_HOST") ?? "localhost");
+connectionString = connectionString.Replace("{DB_PORT}", Environment.GetEnvironmentVariable("DB_PORT") ?? "5432");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
 

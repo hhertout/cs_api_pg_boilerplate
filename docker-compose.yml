@@ -1,6 +1,26 @@
-version: "3.7"
-
 services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "dotnet watch"
+    volumes:
+      - ./Program.cs:/app/Program.cs
+      - ./Controllers:/app/Controllers
+      - ./Models:/app/Models
+      - ./Repository:/app/Repository
+      - ./Config:/app/Config
+      - ./Migrations:/app/Migrations
+    ports:
+      - "4000:4000"
+    environment:
+      - DB_PASSWORD=postgres
+      - DB_USERNAME=postgres
+      - DB_HOST=db
+      - DB_PORT=5432
+    depends_on:
+      - db
+
   db:
     container_name: postgresql
     image: postgres
