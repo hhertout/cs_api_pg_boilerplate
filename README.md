@@ -1,6 +1,23 @@
-# .NET learn
+# .NET API with Postgres DB
 
-## Server
+Quick project with the code base for a .NET json API with Postgres database.
+
+## Installation
+
+With docker :
+```bash
+docker compose up -d
+```
+
+Manual install :
+```bash
+dotnet restore
+dotnet run
+```
+
+## How to
+
+### Server
 
 Build:
 
@@ -14,7 +31,7 @@ Run the server :
 dotnet run
 ```
 
-## Env variable
+### Env variable
 
 Env variable are required for the `appsettings.json` file :
 For example : 
@@ -28,7 +45,7 @@ For example :
 
 You must set them in the `.env` file similary to the `.env.example`.
 
-## Postgres
+### Postgres
 
 #### Add dependencies :
 
