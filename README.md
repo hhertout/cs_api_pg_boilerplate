@@ -6,6 +6,8 @@ Source:
 
 <a href="https://learn.microsoft.com/fr-fr/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code">.NET Web api controller guide</a>
 
+<a href="https://learn.microsoft.com/fr-fr/ef/core/">Entity Framework</a>
+
 ## Create the project
 
 ```bash
