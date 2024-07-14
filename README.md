@@ -2,6 +2,19 @@
 
 Quick project with the code base for a .NET json API with Postgres database.
 
+Source:
+
+<a href="https://learn.microsoft.com/fr-fr/aspnet/core/tutorials/first-web-api?view=aspnetcore-8.0&tabs=visual-studio-code">.NET Web api controller guide</a>
+
+## Create the project
+
+```bash
+dotnet new webapi --use-controllers -o <api_name>
+cd <api_name>
+dotnet add package Microsoft.EntityFrameworkCore.InMemory
+code -r ../TodoApi
+```
+
 ## Installation
 
 With docker :
